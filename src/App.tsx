@@ -118,7 +118,7 @@ const InquiryModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => voi
                   <button 
                     type="submit"
                     disabled={loading}
-                    className="w-full mt-8 bg-boho-rust text-white py-4 text-[10px] tracking-[0.3em] uppercase font-bold hover:bg-boho-dark transition-all disabled:opacity-50"
+                    className="w-full mt-8 bg-sunset-orange text-white py-4 text-[10px] tracking-[0.3em] uppercase font-bold hover:bg-opacity-90 transition-all shadow-lg disabled:opacity-50"
                   >
                     {loading ? 'Sending...' : 'Send Inquire'}
                   </button>
@@ -144,7 +144,7 @@ const Navbar = ({ onOpen }: { onOpen: () => void }) => (
       </div>
       <button 
         onClick={onOpen}
-        className="text-[10px] tracking-[0.2em] uppercase font-bold text-boho-rust border-b border-boho-rust pb-1 hover:text-boho-dark hover:border-boho-dark transition-all"
+        className="text-[10px] tracking-[0.2em] uppercase font-bold text-sunset-orange border-b border-sunset-orange pb-1 hover:text-boho-dark hover:border-boho-dark transition-all"
       >
         Get Started
       </button>
@@ -161,7 +161,7 @@ const Hero = () => (
         className="w-full h-full object-cover opacity-70"
         referrerPolicy="no-referrer"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-boho-cream/20 via-transparent to-boho-cream" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-boho-cream" />
     </div>
     
     <motion.div 
@@ -170,11 +170,11 @@ const Hero = () => (
       transition={{ duration: 1, ease: "easeOut" }}
       className="relative z-10 max-w-4xl mt-20"
     >
-      <h1 className="text-6xl md:text-8xl font-medium mb-8 leading-tight text-boho-dark drop-shadow-sm">
+      <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight text-white drop-shadow-lg">
         Zero-Wait <br />
         <span className="italic font-light">Experience.</span>
       </h1>
-      <p className="text-2xl md:text-3xl font-bold font-serif text-[#000080] max-w-3xl mx-auto leading-relaxed mb-12 drop-shadow-sm">
+      <p className="text-xl md:text-2xl font-normal font-sans text-boho-cream max-w-3xl mx-auto leading-loose mb-16 drop-shadow-md">
         Customers scan and order in seconds. No more waving down staff or waiting for a physical menu.
       </p>
       <motion.a
@@ -183,21 +183,40 @@ const Hero = () => (
         rel="noopener noreferrer"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="inline-block px-10 py-4 bg-boho-dark text-boho-cream rounded-full text-sm uppercase tracking-widest font-medium hover:bg-opacity-90 transition-all shadow-lg"
+        className="inline-block px-10 py-4 bg-sunset-orange text-white rounded-full text-sm uppercase tracking-widest font-bold hover:bg-opacity-90 transition-all shadow-lg"
       >
         Show Demo Menu
       </motion.a>
-      <div className="mt-24 space-y-6">
-        <p className="text-4xl md:text-5xl font-light italic text-boho-dark/70">Why should you get a QR menu?</p>
-        <p className="text-2xl md:text-3xl uppercase tracking-[0.4em] text-boho-dark/30 font-light">because</p>
-      </div>
     </motion.div>
   </section>
 );
 
 const About = () => (
-  <section id="about" className="pt-16 pb-32 px-6 bg-boho-cream">
+  <section id="about" className="py-24 px-6 bg-boho-cream">
     <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-24 space-y-6">
+        <p className="text-3xl md:text-4xl font-light italic text-boho-dark/80">Why should you get a QR menu?</p>
+        <div className="flex flex-col items-center gap-2 pt-4">
+          <motion.p 
+            initial={{ opacity: 0, letterSpacing: "0em" }}
+            whileInView={{ opacity: 1, letterSpacing: "0.2em" }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="text-4xl md:text-5xl lg:text-6xl uppercase text-boho-dark/90 font-bold ml-[0.2em] leading-none"
+          >
+            Because
+          </motion.p>
+          <motion.p 
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.6 }}
+            className="text-4xl md:text-5xl lg:text-6xl uppercase tracking-[0.2em] text-boho-dark/90 font-bold ml-[0.2em] leading-none"
+          >
+            It Is
+          </motion.p>
+        </div>
+      </div>
       <div className="grid md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-5 relative">
           <motion.div
@@ -208,7 +227,7 @@ const About = () => (
             className="relative z-10"
           >
             <img 
-              src="https://images.unsplash.com/photo-1613274554329-70f997f5789f?auto=format&fit=crop&q=80&w=800" 
+              src="https://www.mcdonaldwhsl.com/wp-content/uploads/2022/10/albert-hu-RII9HuLDz4M-unsplash.jpg" 
               alt="Contactless Dining with QR Menu" 
               className="rounded-sm shadow-2xl w-full"
               referrerPolicy="no-referrer"
@@ -241,7 +260,7 @@ const About = () => (
 );
 
 const EfficiencyHub = ({ onOpen }: { onOpen: () => void }) => (
-  <section id="efficiency" className="py-32 px-6 bg-boho-beige">
+  <section id="efficiency" className="py-40 px-6 bg-boho-beige">
     <div className="max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 gap-24 items-start">
         <div className="relative">
@@ -310,7 +329,7 @@ const EfficiencyHub = ({ onOpen }: { onOpen: () => void }) => (
           </div>
           <button 
             onClick={onOpen}
-            className="mt-12 bg-boho-rust text-white px-10 py-4 text-[10px] tracking-[0.3em] uppercase font-bold hover:bg-boho-dark transition-all"
+            className="mt-12 bg-sunset-orange text-white px-10 py-4 text-[10px] tracking-[0.3em] uppercase font-bold hover:bg-opacity-90 transition-all shadow-lg"
           >
             Let's Work Together
           </button>
@@ -321,7 +340,7 @@ const EfficiencyHub = ({ onOpen }: { onOpen: () => void }) => (
 );
 
 const Pricing = ({ onOpen }: { onOpen: () => void }) => (
-  <section id="pricing" className="py-32 px-6 bg-boho-cream">
+  <section id="pricing" className="py-40 px-6 bg-boho-cream">
     <div className="max-w-7xl mx-auto text-center">
       <h2 className="text-4xl md:text-5xl font-light mb-4 italic">Pricing</h2>
       <p className="text-sm tracking-[0.2em] uppercase text-boho-dark/50 mb-20">Simple plans to automate your business.</p>
@@ -361,7 +380,7 @@ const Pricing = ({ onOpen }: { onOpen: () => void }) => (
           </ul>
           <button 
             onClick={onOpen}
-            className="w-full bg-boho-rust text-white py-4 text-[10px] tracking-[0.3em] uppercase font-bold hover:bg-boho-dark transition-all"
+            className="w-full bg-sunset-orange text-white py-4 text-[10px] tracking-[0.3em] uppercase font-bold hover:bg-opacity-90 transition-all shadow-lg"
           >
             Get Started
           </button>
@@ -372,7 +391,7 @@ const Pricing = ({ onOpen }: { onOpen: () => void }) => (
 );
 
 const Reviews = () => (
-  <section id="reviews" className="py-32 px-6 bg-boho-beige">
+  <section id="reviews" className="py-40 px-6 bg-boho-beige">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-20">
         <h2 className="text-4xl font-light italic mb-4">Trusted by Owners</h2>
@@ -430,7 +449,7 @@ const Footer = () => (
               <span className="text-[10px] tracking-widest uppercase font-bold">Gmail</span>
             </a>
             <a 
-              href="https://wa.me/918570949108?text=Im%20interested%20in%20getting%20digital%20QR%20menus" 
+              href="https://wa.me/918570949108?text=I'm%20interested%20in%20getting%20a%20QR%20menu" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-boho-rust transition-colors flex items-center gap-2"
@@ -479,7 +498,7 @@ const Footer = () => (
 
 const FloatingWhatsApp = () => (
   <motion.a
-    href="https://wa.me/918570949108?text=Im%20interested%20in%20getting%20digital%20QR%20menus"
+    href="https://wa.me/918570949108?text=I'm%20interested%20in%20getting%20a%20QR%20menu"
     target="_blank"
     rel="noopener noreferrer"
     initial={{ opacity: 0, scale: 0.5, y: 20 }}
