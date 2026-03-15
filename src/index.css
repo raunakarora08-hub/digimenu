@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Montserrat", sans-serif;
+  
+  --color-boho-cream: #F5F2ED;
+  --color-boho-beige: #E8E1D9;
+  --color-boho-rust: #B87352;
+  --color-boho-dark: #2C2C2C;
+  --color-boho-grey: #D1CDC7;
+}
+
+@layer base {
+  body {
+    @apply bg-boho-cream text-boho-dark antialiased font-sans;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600&display=swap');
