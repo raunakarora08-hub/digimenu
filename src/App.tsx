@@ -175,7 +175,7 @@ const Hero = () => (
         <span className="italic font-light">Experience.</span>
       </h1>
       <p 
-        className="text-xl md:text-2xl font-normal font-sans text-boho-cream max-w-3xl mx-auto leading-loose mb-16 drop-shadow-md"
+        className="text-xl md:text-2xl font-bold font-sans text-boho-cream max-w-3xl mx-auto leading-loose mb-16 drop-shadow-md"
         style={{ WebkitTextStroke: '0.5px black' }}
       >
         Customers scan and order in seconds. No more waving down staff or waiting for a physical menu.
