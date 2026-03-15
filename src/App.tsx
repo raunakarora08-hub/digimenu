@@ -174,7 +174,7 @@ const Hero = () => (
         Zero-Wait <br />
         <span className="italic font-light">Experience.</span>
       </h1>
-      <p className="text-xl md:text-2xl font-light text-boho-dark max-w-3xl mx-auto leading-relaxed mb-12 [text-shadow:_-0.5px_-0.5px_0_#fff,_0.5px_-0.5px_0_#fff,_-0.5px_0.5px_0_#fff,_0.5px_0.5px_0_#fff]">
+      <p className="text-2xl md:text-3xl font-bold font-serif text-[#000080] max-w-3xl mx-auto leading-relaxed mb-12 drop-shadow-sm">
         Customers scan and order in seconds. No more waving down staff or waiting for a physical menu.
       </p>
       <motion.a
@@ -208,7 +208,7 @@ const About = () => (
             className="relative z-10"
           >
             <img 
-              src="https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?auto=format&fit=crop&q=80&w=800" 
+              src="https://images.unsplash.com/photo-1613274554329-70f997f5789f?auto=format&fit=crop&q=80&w=800" 
               alt="Contactless Dining with QR Menu" 
               className="rounded-sm shadow-2xl w-full"
               referrerPolicy="no-referrer"
