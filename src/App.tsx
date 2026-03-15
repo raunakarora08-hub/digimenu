@@ -158,7 +158,7 @@ const Hero = () => (
       <img 
         src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fd00e1139c902073e903a6feb7192ad4_screen.jpg" 
         alt="Digital QR Menu Template" 
-        className="w-full h-full object-cover opacity-70"
+        className="w-full h-full object-cover opacity-70 blur-[2px] scale-105"
         referrerPolicy="no-referrer"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-boho-cream" />
@@ -174,7 +174,10 @@ const Hero = () => (
         Zero-Wait <br />
         <span className="italic font-light">Experience.</span>
       </h1>
-      <p className="text-xl md:text-2xl font-normal font-sans text-boho-cream max-w-3xl mx-auto leading-loose mb-16 drop-shadow-md">
+      <p 
+        className="text-xl md:text-2xl font-normal font-sans text-boho-cream max-w-3xl mx-auto leading-loose mb-16 drop-shadow-md"
+        style={{ WebkitTextStroke: '0.5px black' }}
+      >
         Customers scan and order in seconds. No more waving down staff or waiting for a physical menu.
       </p>
       <motion.a
